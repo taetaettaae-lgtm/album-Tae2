@@ -1,5 +1,5 @@
 /* ============================================================
-   คลังอัลบั้มรูป — เซิร์ฟเวอร์ Node.js ตัวเดียว (ไม่ต้อง npm install)
+   รูปกิจกรรม— เซิร์ฟเวอร์ Node.js ตัวเดียว (ไม่ต้อง npm install)
    รัน: node server.js แล้วเปิด http://localhost:3000
    เก็บข้อมูล: data/albums.json (เมตาดาต้า) + uploads/ (ไฟล์รูป)
    ============================================================ */
@@ -15,7 +15,7 @@ const UPLOAD_DIR = path.join(ROOT, 'uploads');
 const PUBLIC_DIR = path.join(ROOT, 'public');
 const ALBUMS_FILE = path.join(DATA_DIR, 'albums.json');
 const CONFIG_FILE = path.join(DATA_DIR, 'config.json');
-const MAX_BODY = 150 * 1024 * 1024; // 150 MB ต่อครั้ง (อัปโหลดหลายรูปพร้อมกันเป็น base64)
+const MAX_BODY = 150 * 1024 * 1024; // 10 GB ต่อครั้ง (อัปโหลดหลายรูปพร้อมกันเป็น base64)
 
 [DATA_DIR, UPLOAD_DIR].forEach(d => { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); });
 
